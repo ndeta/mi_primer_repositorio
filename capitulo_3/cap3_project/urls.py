@@ -16,9 +16,14 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from cap3_app.views import views
+
+
+from cap3_app import views
+
 
 urlpatterns = [
+    path('home/',views.home_page,name='home'),
+
     path('admin/', admin.site.urls),
     path('canelones/',views.canelones,name='canelones'),
     path('carbonara/',views.carbonara,name='carbonara'),
