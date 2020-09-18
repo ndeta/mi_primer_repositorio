@@ -21,5 +21,6 @@ from cap5_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('insert/',views.insert,name='insert'),
+    path('select/',views.select, name=' select'),
+    path('insert/',views.insert, name=' insert'),
 ]
