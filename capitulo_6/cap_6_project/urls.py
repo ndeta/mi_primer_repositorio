@@ -21,4 +21,6 @@ from listas import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('formularios/',views.formularios, name='formularios'),
+    path('anadir',views.anadir, name='anadir'),
+    
 ]

@@ -18,6 +18,8 @@
                   placeholder="Escribe tu nota aquí"></textarea>
         <br>
         <input type="submit" value="guardar">
+        {% csrf_token %}
+
     </form>
     </body>
 </html>
