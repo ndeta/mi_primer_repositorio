@@ -5,7 +5,12 @@
     <title>Title</title>
 
     <h1>Notas</h1>
+    {% for nota in notas %}
+    	    {{ nota}}<br>
+	{% endfor %}
+
     <form method="POST" action="/anadir">
+
         <label for="id_prioridad">Prioridad:</label>
         <select id="id_prioridad" name="name_prioridad">
             <option value="alta">Alta</option>
