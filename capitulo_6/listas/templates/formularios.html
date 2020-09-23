@@ -5,9 +5,7 @@
     <title>Title</title>
 
     <h1>Notas</h1>
-    {% for nota in notas %}
-    	    {{ nota}}<br>
-	{% endfor %}
+
 
     <form method="POST" action="/anadir">
 
@@ -26,5 +24,14 @@
         {% csrf_token %}
 
     </form>
+
+
+    {% for nota in notas %}
+   <fieldset>
+       <legend>{{ nota.prioridad }} - {{ nota.titulo }}</legend>
+       {{ nota.contenido }} <br>
+   </fieldset>
+        <br>
+    {% endfor %}
     </body>
 </html>
