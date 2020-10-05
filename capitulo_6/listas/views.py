@@ -6,13 +6,13 @@ import psycopg2.extras
 # Create your views here.
 def formularios(request):
 
-    conn = psycopg2.connect(dbname="capitulo_6_db",
+    conn = psycopg2.connect(dbname="capitulo_4_db",
                             user="capitulo_6_user",
                             password="mango")
     cursor = conn.cursor()
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
-    cursor.execute("SELECT * FROM Nota;")
+    cursor.execute("SELECT * FROM Nota1;")
     result = cursor.fetchall()
     cursor.close()
     conn.close()
@@ -22,7 +22,7 @@ def formularios(request):
 
 def anadir(request):
 
-    conn = psycopg2.connect(dbname="capitulo_6_db",
+    conn = psycopg2.connect(dbname="capitulo_4_db",
                             user="capitulo_6_user",
                             password="mango")
 
